@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- External QR code library -->
+    <!-- This library helps convert simple data to QR code images -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>QR Code Generator</h1>
+            <hr />
+            
+            <!-- QR code container -->
+            <div class="qrcode"></div>
+
+            <!-- Input field to type URL or text -->
+            <input type="text" 
+                   placeholder="Paste a URL or enter text, then press enter"
+                   onchange="generateQr()" />
+            
+            <!-- Generate QR Code Button -->
+            <button onclick="generateQr()">Generate QR Code</button>
+            
+            <!-- Download QR Code Button -->
+            <button id="downloadBtn">Download QR Code</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
