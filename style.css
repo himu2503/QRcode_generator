@@ -1,116 +1,112 @@
-/* Apply styles to the body */
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: "Ubuntu", sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: #333;
-    transition: background-color 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #000000, #1e1e2f);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Style the container */
+/* Container with glass effect */
 .container {
-    background-color: #fff;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 40px 30px;
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
-    transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(255, 0, 128, 0.15);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  width: 90%;
+  max-width: 420px;
 }
 
-.container:hover {
-    transform: translateY(-5px);
-}
-
-/* Style the header */
-.header {
-    text-align: center;
-}
-
-/* Style the h1 element */
+/* Main heading */
 h1 {
-    font-size: 32px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 600;
+  background: linear-gradient(to right, #ff4dd2, #4db8ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
 }
 
-/* Style the hr element */
-hr {
-    border: 0;
-    border-top: 1px solid #e0e0e0;
-    margin: 25px 0;
+/* Subtext */
+.subtext {
+  font-size: 14px;
+  color: #bbb;
+  margin-bottom: 25px;
 }
 
-/* Style the input field */
-input[type="text"] {
-    width: 100%;
-    padding: 12px 15px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus {
-    border-color: #007bff;
-}
-
-/* Style the QR code div */
+/* QR Code box */
 .qrcode {
-    margin: 25px 0;
-    /* border: 2px solid #e43db2;*/
-    border-radius: 8px;
-    transition: transform 0.3s ease;
+  margin: 20px auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 12px;
+  display: inline-block;
 }
 
-.qrcode:hover {
-    transform: scale(1.05);
+/* Input field */
+input[type="text"] {
+  width: 100%;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: 1px solid #ff4dd2;
 }
 
-/* Style the button */
+input::placeholder {
+  color: #ccc;
+}
+
+/* Button container */
+.buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Stylish buttons */
 button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 24px;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(to right, #ff4dd2, #4db8ff);
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-/* Hover effect for the button */
 button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+  background: linear-gradient(to right, #4db8ff, #ff4dd2);
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(255, 77, 210, 0.4);
 }
 
-/* Focus effect for the button */
-button:focus {
-    background-color: #0056b3;
-    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
-}
-
-/* Responsive design */
 @media (max-width: 480px) {
-    .container {
-        padding: 20px 15px;
-    }
+  h1 {
+    font-size: 22px;
+  }
 
-    h1 {
-        font-size: 24px;
-    }
-
-    button {
-        width: 100%;
-    }
+  button {
+    width: 100%;
+  }
 }
